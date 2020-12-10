@@ -6,8 +6,10 @@
     @csrf 
     <label for="">Numero de laboratorio: </label>
     <input type="text" name="id" placeholder="No. apartamento" class="form-control mb-2">
+
     <label for="">Productos: </label>
     <input type="text" name="productos" placeholder="Productos" class="form-control mb-2">
+    
     <label for="">Ventas: </label>
     <input type="text" name="ventas" placeholder="Ventas" class="form-control mb-2">
 

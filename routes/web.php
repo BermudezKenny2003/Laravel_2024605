@@ -21,6 +21,7 @@ Route::resource('/productos', 'App\Http\Controllers\ProductoController');
 Route::resource('/estudiantes', 'App\Http\Controllers\EstudianteController');
 Route::resource('/materias', 'App\Http\Controllers\MateriaController');
 Route::resource('/laboratorios', 'App\Http\Controllers\LaboratorioController');
+Route::resource('/usuarios', 'App\Http\Controllers\UsuarioController');
 
 Route::get('/', function () {
     return view('welcome');

@@ -1,6 +1,6 @@
 @extends('Plantilla')
 @section('secciondinamica')
-    <h1>Lista de clientes registrados</h1>
+    <h1>Lista de usuarios registrados</h1>
     <table class="table table-dark">
   <thead>
     <tr>
@@ -10,9 +10,7 @@
       <th scope="col">Apellidos</th>
       <th scope="col">Email</th>
       <th scope="col">Celular</th>
-      <th scope="col">Perfil</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Barrio</th>
+      <th scope="col">Fecha_alta</th>
       </tr>
   </thead>
   <tbody>
@@ -24,12 +22,10 @@
       <td>{{$dato->apellidos}}</td>
       <td>{{$dato->email}}</td>
       <td>{{$dato->celular}}</td>
-      <td>{{$dato->perfil}}</td>
-      <td>{{$dato->direccion}}</td>
-      <td>{{$dato->barrio}}</td>
+      <td>{{$dato->fecha_alta}}</td>
       <td>
-      <a href="{{url('clientes/'.$dato->id.'/edit')}}"> <button type="button" class="btn btn-warning btn-sm">Editar</button></a>
-      <form action="{{ route('clientes.destroy', $dato) }}" class="d-inline" method="POST">
+      <a href="{{url('usuarios/'.$dato->id.'/edit')}}"> <button type="button" class="btn btn-warning btn-sm">Editar</button></a>
+      <form action="{{ route('usuarios.destroy', $dato) }}" class="d-inline" method="POST">
           @method('delete')
           @csrf
           <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
